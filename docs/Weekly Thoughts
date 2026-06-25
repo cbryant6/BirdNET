@@ -9,8 +9,6 @@
 
 - **Ran the contract and model questions past Daan and Qian.** Their answers reshaped the architecture:
   - HP is binary and feature-fed, not multi-class; AED is a gate we keep as diagnostic; BirdNET is dual-purpose, with a feature-engineering step feeding HP.
-  - Corrected Daan's assumption that it was one composite model with a single output.
-  - Confirmed: multi-table output is supported, and weights are downloaded and assigned per sub-model.
 
 - **Locked the compression direction:** class pruning as the lead (training-free, configurable around a TBD target-species list); INT8 timeboxed to a per-channel test; FP16 proven viable.
 
