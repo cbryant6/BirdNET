@@ -9,6 +9,10 @@ That property is the whole reason it's viable. QAT and weight pruning are off th
 - **Zero fidelity loss on retained species** — the kept classes are untouched, so their confidences are identical to the full model.
 - **False-positive reduction** — species that can't occur in the deployment region can no longer be predicted at all.
 
+## One-line summary
+
+Training-free output-layer class pruning, built mask-first then slice, configurable around the Osa ~435 scaffold, with a mandatory label-index parity check, and the slicing stage gated on the ONNX FP32 export - Likely my first main task, unless it has already been done
+
 ## Two-stage build
 
 Build the mechanism in two stages, simplest first.
@@ -47,6 +51,3 @@ The masking mechanism runs in **parallel** with the ONNX FP32 export task — it
 - **KWF target-species list** — needed to *finalize* the keep-set, not to *build* the mechanism. Build against 435 until it lands.
 - **Kyle's primary system metric** — decides whether the physical-slicing investment is worth it. If the digital twin grades on model size, slicing matters. If it grades on something FP16 already covers (and not size), the slicing payoff may not justify the work. FP16 halves size but doesn't speed up CPU inference; class pruning can improve both size and latency.
 
-## One-line summary
-
-Training-free output-layer class pruning, built mask-first then slice, configurable around the Osa ~435 scaffold, with a mandatory label-index parity check, and the slicing stage gated on the ONNX FP32 export.
