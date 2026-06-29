@@ -11,7 +11,7 @@ That property is the whole reason it's viable. QAT and weight pruning are off th
 
 ## One-line summary
 
-Training-free output-layer class pruning, built mask-first then slice, configurable around the Osa ~435 scaffold, with a mandatory label-index parity check, and the slicing stage gated on the ONNX FP32 export -- Likely my first main task, unless it has already been done
+Training-free output-layer class pruning, built mask-first then slice, configurable around the Osa ~435 scaffold, with a mandatory label-index parity check, and the slicing stage gated on the ONNX FP32 export -- Likely my first main task, unless it has already been done.
 
 ## Two-stage build
 
