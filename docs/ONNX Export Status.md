@@ -1,6 +1,6 @@
 # BirdNET ONNX Export — Status Update
 
-**Author:** Coleman (January)
+**Author:** Coleman
 **Date:** 2026-07-06
 **Scope:** BirdNET FP32 ONNX export, and a data-segmentation issue found while validating it against the 108k reference CSV.
 
